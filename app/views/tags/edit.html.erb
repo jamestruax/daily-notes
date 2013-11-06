@@ -1,0 +1,27 @@
+<div class="note-frame">
+	<%= form_for :tag, url: tag_path(@tag), method: :patch do |f| %>
+	<table>
+		<tr>
+			<td colspan="2" class="note-header">TAG</td>
+		</tr>
+		<tr>
+			<td class="note-label-col"><%= f.label :name %></td>
+			<td class="note-entry-col"><%= f.text_field :name %>
+			</td>
+		</tr>
+		<tr class="button-entry-row">
+			<td class="button-entry-row" colspan="3"><table width="100%"><tr>
+				<td class="two-button-spacer"> </td>
+				<td class="button-entry">
+					<%= link_to "CANCEL", controller: "home", action: "index" %>
+				</td>
+				<td class="two-button-spacer"> </td>
+				<td class="button-entry">
+					<%= f.submit %>
+				</td>
+				<td class="two-button-spacer"> </td>
+			</tr></table></td>
+		</tr>
+	</table>
+    <% end %>
+</div>

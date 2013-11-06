@@ -1,0 +1,32 @@
+<div class="note-frame">
+
+	<table>
+		<tr>
+			<td class="note-header">TAG</td>
+			<td class="note-header-link">
+				<%= link_to "Edit", controller: "tags", action: "edit" %>
+			</td>
+		</tr>
+		<tr>
+			<td class="note-label-col">Name</td>
+			<td class="note-entry-col"><%= @tag.name %></td>
+		</tr>
+		<tr>
+			<td class="note-label-col">Notes</td>
+			<td class="note-entry-col">
+				<% @tag.notes.each do |n| %>
+					<%= link_to n.summarize, controller: "notes", action: "show", id: n.id %></br>
+				<% end %>
+			</td>
+		</tr>
+		<tr class="button-entry-row">
+			<td class="button-entry-row" colspan="3"><table width="100%"><tr>
+				<td class="one-button-spacer"> </td>
+				<td class="button-entry">
+					<%= link_to "OK", controller: "home", action: "index" %>
+				</td>
+				<td class="one-button-spacer"> </td>
+			</tr></table></td>
+		</tr>
+	</table>
+</div>

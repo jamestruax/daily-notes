@@ -1,0 +1,46 @@
+<div class="note-frame">
+	<%= form_for :note, url: note_path(@note), method: :patch do |f| %>
+	<table>
+		<tr>
+			<td colspan="2" class="note-header">NOTE</td>
+		</tr>
+		<tr>
+			<td class="note-label-col"><%= f.label :date %></td>
+			<td class="note-entry-col">
+				<%= f.date_select :date, as: :bootstrap_datepicker %>
+			</td>
+		</tr>
+		<tr>
+			<td class="note-label-col"><%= f.label :time %></td>
+			<td class="note-entry-col"><%= f.time_select :time, size: 98 %></td>
+		</tr>
+		<tr>
+			<td class="note-label-col">Note</td>
+			<td class="note-entry-col"><%= f.text_area :description, rows: 10, cols: 100 %></td>
+		</tr>
+		<tr>
+			<td class="note-label-col">Tags</td>
+			<td class="note-entry-col">
+				<% @tags.each do |t| %>
+					<%= check_box_tag "note[tag_ids][]", t.id, @note.tag_ids.include?(t.id) %>
+					<%= t.name %></br>
+				<% end %>
+				<%= link_to "New Tag", controller: "tags", action: "new" %>
+			</td>
+		</tr>
+		<tr class="button-entry-row">
+			<td class="button-entry-row" colspan="3"><table width="100%"><tr>
+				<td class="two-button-spacer"> </td>
+				<td class="button-entry">
+					<%= link_to "CANCEL", controller: "home", action: "index" %>
+				</td>
+				<td class="two-button-spacer"> </td>
+				<td class="button-entry">
+					<%= f.submit %>
+				</td>
+				<td class="two-button-spacer"> </td>
+			</tr></table></td>
+		</tr>
+	</table>
+    <% end %>
+</div>

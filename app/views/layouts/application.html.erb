@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>DailyNotes</title>
+  <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+  <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+  <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+<%= javascript_include_tag "https://code.jquery.com/jquery.js" %>
+<%= javascript_include_tag "bootstrap.js" %>
+<%= stylesheet_link_tag "sticky-footer.css"%>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+$('#sandbox-container input').datepicker({
+    calendarWeeks: true,
+    autoclose: true
+});
+</script>
+
+<div class="container">
+
+  <%= render "home/header" %>
+
+  <div class="main-body">
+    <%= yield %>
+  </div>
+
+  <%= render "home/footer" %>
+   
+</body>
+</html>

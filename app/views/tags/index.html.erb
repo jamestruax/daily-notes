@@ -1,0 +1,26 @@
+<div class="note-frame">
+	<table width="100%">
+		<tr>
+			<td class="note-header">ALL TAGS</td>
+		</tr>
+		<tr>
+			<td class="note-entry-col">
+				<% @tags.each do |tag| %>
+					<%= image_tag "tag-icon.png" %>
+					<%= link_to tag.summarize, controller: "tags", action: "show", id: tag.id %></br>
+				<% end %>
+			</td>
+		</tr>
+		<tr class="button-entry-row">
+			<td class="button-entry-row">
+				<table width="100%"><tr>
+					<td class="one-button-spacer"> </td>
+					<td class="button-entry">
+						<%= link_to "OK", controller: "home", action: "index" %>
+					</td>
+					<td class="one-button-spacer"> </td>
+				</tr></table>
+			</td>
+		</tr>
+	</table>
+</div>

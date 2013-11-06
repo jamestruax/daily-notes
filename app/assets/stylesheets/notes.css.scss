@@ -1,0 +1,56 @@
+// Place all the styles related to the Notes controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.note-frame
+{
+  background-color:#0058a0;
+  color:white;
+  text-align:left;
+  vertical-align:top;
+}
+
+.note-header
+{
+  font-size:larger;
+  background-color:#004882;
+  text-align:left;
+}
+
+.note-header-link
+{
+  background-color:#004882;
+  text-align:right;
+}
+
+.note-label-col
+{
+  text-align:right;
+  font-weight: bold;
+  vertical-align:top;
+}
+
+.note-entry-col
+{
+  text-align:left;
+  vertical-align:top;
+}
+
+.button-entry-row
+{
+  background-color:#0058a0;
+}
+
+.one-button-spacer
+{
+}
+
+.two-button-spacer
+{
+}
+
+.button-entry
+{
+  text-align:center;
+  font-size:larger;
+  background-color:#004882;
+}

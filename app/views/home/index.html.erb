@@ -1,0 +1,21 @@
+<% priorDate = nil%>
+
+<% @notes.each do |note| %>
+
+  <% if note.date != priorDate %>
+  	 <% @printDate = true %>
+  <% else %>
+  	 <% @printDate = false %>
+  <% end %>
+
+  <%= render note %>
+
+  <% priorDate = note.date%>
+
+<% end %>
+
+<p><%= @loggedInMessage %></p>
+
+
+    
+    
