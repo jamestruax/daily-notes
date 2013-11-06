@@ -11,10 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20131105212906) do
+ActiveRecord::Schema.define(version: 20131106220747) do
 
   create_table "notes", force: true do |t|
-    t.string   "description"
+    t.text     "description", limit: 255
     t.date     "date"
     t.time     "time"
     t.integer  "owner_id"
