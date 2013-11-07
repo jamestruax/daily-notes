@@ -11,14 +11,15 @@ class NotesController < ApplicationController
   end
   
   def new
-    @tags = Tag.find(:all)
+    @tags = current_user.tags
     @note = Note.new
     @note.date = Date.today
     @note.time = Time.now
     @note.description = ""; 
-    defaultTag = Tag.find(:all).detect { |t| t.name == "Sprint 2013-13" }
+    @note.owner = current_user
+    defaultTag = current_user.tags.detect { |t| t.name == "Sprint 2013-13" }
     @note.tags.push( defaultTag ) 
-    defaultTag = Tag.find(:all).detect { |t| t.name == "Research" }
+    defaultTag = current_user.tags.detect { |t| t.name == "Research" }
     @note.tags.push( defaultTag ) 
   end
   
@@ -32,12 +33,12 @@ class NotesController < ApplicationController
   
   def show
     @note = Note.find(params[:id])
-    @tags = Tag.find(:all)
+    @tags = current_user.tags
   end
   
   def edit
     @note = Note.find(params[:id])
-    @tags = Tag.find(:all)
+    @tags = current_user.tags
   end
   
   def update

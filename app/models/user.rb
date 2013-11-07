@@ -6,4 +6,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :notes, foreign_key: :owner_id
+  has_many :tags, foreign_key: :owner_id
 end

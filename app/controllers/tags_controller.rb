@@ -2,7 +2,7 @@ class TagsController < ApplicationController
   before_filter :authenticate_user!
 
   def index
-    @tags = Tag.all
+    @tags = current_user.tags
     respond_to do |format|
       format.html # index.html.erb
       format.xml  { render xml: @tags}
@@ -12,6 +12,7 @@ class TagsController < ApplicationController
   
   def new
     @tag = Tag.new
+    @tag.owner = current_user
     if (params.has_key?(:name)) 
         @tag.name = "Default"
     end
@@ -19,6 +20,7 @@ class TagsController < ApplicationController
   
   def create
     @tag = Tag.new(user_params)
+    @tag.owner = current_user
     if @tag.save
       redirect_to controller: "home", action: "index"
     end
