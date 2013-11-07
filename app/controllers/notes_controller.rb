@@ -14,7 +14,7 @@ class NotesController < ApplicationController
     @tags = current_user.tags
     @note = Note.new
     @note.date = Date.today
-    @note.time = Time.now
+    @note.time = Time.now.localtime
     @note.description = ""; 
     @note.owner = current_user
     defaultTag = current_user.tags.detect { |t| t.name == "Sprint 2013-13" }

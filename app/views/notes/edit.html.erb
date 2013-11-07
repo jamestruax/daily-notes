@@ -12,7 +12,7 @@
 		</tr>
 		<tr>
 			<td class="note-label-col"><%= f.label :time %></td>
-			<td class="note-entry-col"><%= f.time_select :time, size: 98 %></td>
+			<td class="note-entry-col"><%= f.time_select :time, {minute_step: 15, ampm: true} %></td>
 		</tr>
 		<tr>
 			<td class="note-label-col">Note</td>
