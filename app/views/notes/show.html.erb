@@ -1,54 +1,42 @@
-<div class="note-frame">
-
-	<table>
-		<tr>
-			<td class="note-header">NOTE</td>
-			<td class="note-header-link">
-				<%= link_to "Edit", controller: "notes", action: "edit" %>
-			</td>
-		</tr>
-		<tr>
-			<td class="note-label-col">Date</td>
-			<td class="note-entry-col">
-				<% if @note.date.nil? %>
-					nil
-				<% else %>
-					<%= @note.date.strftime("%B %e, %Y") %>
-				<% end %>
-			</td>
-		</tr>
-		<tr>
-			<td class="note-label-col">Time</td>
-			<td class="note-entry-col">
-				<% if @note.date.nil? %>
-  					nil
-				<% else %>
-  					<%= @note.time.strftime("%l:%M %P") %>
-				<% end %>
-			</td>
-		</tr>
-		<tr class="note-description">
-			<td class="note-label-col">Note</td>
-			<td class="note-entry-col"><%= simple_format(@note.description) %></td>
-		</tr>
-		<tr>
-			<td class="note-label-col">Tags</td>
-			<!--<td class="note-entry-col">-->
-			<td>
-				<% @note.tags.each do |t| %>
-					<%= image_tag "tag-icon.png" %>
-					<%= t.name %></br>
-				<% end %>
-			</td>
-		</tr>
-		<tr class="button-entry-row">
-			<td class="button-entry-row" colspan="3"><table width="100%"><tr>
-				<td class="one-button-spacer"> </td>
-				<td class="button-entry">
-					<%= link_to "OK", controller: "home", action: "index" %>
-				</td>
-				<td class="one-button-spacer"> </td>
-			</tr></table></td>
-		</tr>
-	</table>
+<div class="row">
+  <div class="row note-header">
+	<div class="col-sm-10 col-xs-8">NOTE</div>
+	<div class="col-sm-2  col-xs-4 note-header-link">
+		<%= link_to "Edit", controller: "notes", action: "edit" %>
+	</div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">Date</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<%= @note.date.strftime("%B %e, %Y") %>
+    </div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">Time</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<%= @note.time.strftime("%l:%M %P") %>
+    </div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">Note</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<%= simple_format(@note.description) %>
+    </div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">Tags</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<% @note.tags.each do |t| %>
+			<%= image_tag "tag-icon.png" %>
+			<%= t.name %></br>
+		<% end %>
+    </div>
+  </div>
+  <div class="row button-entry-row">
+ 	<div class="col-sm-4 col-xs-2"></div>
+ 	<div class="col-sm-4 col-xs-8 button-entry">
+		<%= link_to "OK", controller: "home", action: "index" %>
+ 	</div>
+ 	<div class="col-sm-4 col-xs-2"></div>
+  </div>
 </div>

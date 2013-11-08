@@ -1,15 +1,15 @@
 <% if @printDate%>
-	<div class="row date">
-	  	<div class="col-md-12">
+	<div class="row note-header">
+	  	<div class="col-xs-12">
   			<%= note.date.strftime("%B %e, %Y") %>
   		</div>
 	</div>
 <% end %>
 <div class="row note-details">
-    <div class="col-md-2 time">
+    <div class="col-xs-2 time">
 		<%= note.time.strftime("%l:%M %P")%>
     </div>
-    <div class="col-md-8 note-text">
+    <div class="col-xs-8 note-text">
 		<%= simple_format(note.description) %>
 		<% if note.tags.size > 0 %>
 			<% note.tags.each do |t| %>
@@ -18,7 +18,7 @@
 			<% end %>
 		<% end %>
     </div>
-    <div class="col-md-2 edit-cell">
+    <div class="col-xs-2 edit-cell">
 		<%= link_to "View", controller: "notes", action: "show", id: note.id %>
     </div>
 </div>

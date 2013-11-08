@@ -1,46 +1,61 @@
-<div class="note-frame">
-	<%= form_for :note, url: notes_path do |f| %>
-	<table>
-		<tr>
-			<td colspan="2" class="note-header">NEW NOTE</td>
-		</tr>
-		<tr>
-			<td class="note-label-col"><%= f.label :date %></td>
-			<td class="note-entry-col">
-				<%= f.date_select :date, as: :bootstrap_datepicker %>
-			</td>
-		</tr>
-		<tr>
-			<td class="note-label-col"><%= f.label :time %></td>
-			<td class="note-entry-col"><%= f.time_select :time, {minute_step: 15, ampm: true} %></td>
-		</tr>
-		<tr>
-			<td class="note-label-col">Note</td>
-			<td class="note-entry-col"><%= f.text_area :description, rows: 10, cols: 100 %></td>
-		</tr>
-		<tr>
-			<td class="note-label-col">Tags</td>
-			<td class="note-entry-col">
-				<% @tags.each do |t| %>
-					<%= check_box_tag "note[tag_ids][]", t.id, @note.tag_ids.include?(t.id) %>
-					<%= t.name %></br>
-				<% end %>
-				<%= link_to "New Tag", controller: "tags", action: "new" %>
-			</td>
-		</tr>
-		<tr class="button-entry-row">
-			<td class="button-entry-row" colspan="3"><table width="100%"><tr>
-				<td class="two-button-spacer"> </td>
-				<td class="button-entry">
-					<%= link_to "CANCEL", controller: "home", action: "index" %>
-				</td>
-				<td class="two-button-spacer"> </td>
-				<td class="button-entry">
-					<%= f.submit %>
-				</td>
-				<td class="two-button-spacer"> </td>
-			</tr></table></td>
-		</tr>
-	</table>
-    <% end %>
+<%= form_for :note, url: notes_path do |f| %>
+
+<div class="row">
+  <div class="row note-header">
+	<div class="col-sm-10 col-xs-8">NEW NOTE</div>
+	<div class="col-sm-2  col-xs-4 note-header-link">
+	</div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">
+		<%= f.label :date %>
+ 	</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<%= f.text_field :date, 'data-behaviour' => 'datepicker' %>
+
+		<script type="text/javascript">
+		  $('[data-behaviour~=datepicker]').datepicker({
+		    format: "yyyy/mm/dd",
+		    autoclose: true,
+		    todayHighlight: true
+		});
+	 	</script>
+    </div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">
+		<%= f.label :time %>
+ 	</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<%= f.time_select :time, {minute_step: 15, ampm: true} %>
+    </div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">Note</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<%= f.text_area :description, rows: 10, cols: 75 %>
+    </div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">Tags</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<% @tags.each do |t| %>
+			<%= check_box_tag "note[tag_ids][]", t.id, @note.tag_ids.include?(t.id) %>
+			<%= t.name %></br>
+		<% end %>
+		<%= link_to "New Tag", controller: "tags", action: "new" %>
+    </div>
+  </div>
+  <div class="row button-entry-row">
+ 	<div class="col-sm-2 col-xs-2"></div>
+ 	<div class="col-sm-3 col-xs-3 button-entry">
+		<%= link_to "CANCEL", controller: "home", action: "index" %>
+ 	</div>
+ 	<div class="col-sm-2 col-xs-2"></div>
+ 	<div class="col-sm-3 col-xs-3 button-entry">
+		<%= f.submit %>
+ 	</div>
+ 	<div class="col-sm-2 col-xs-2"></div>
+  </div>
 </div>
+<% end %>

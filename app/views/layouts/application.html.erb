@@ -10,14 +10,13 @@
 </head>
 <body>
 
-<%= javascript_include_tag "bootstrap.js" %>
 <%= stylesheet_link_tag "sticky-footer.css"%>
 
 <div class="container">
 
   <%= render "home/header" %>
 
-  <div class="main-body">
+  <div>
     <%= yield %>
   </div>
 
