@@ -11,7 +11,9 @@
  *= require_self
  *= require_tree .
  */
- 
+
+*= require bootstrap-datepicker
+
 .main-body
 {
 /*  margin-left:auto;

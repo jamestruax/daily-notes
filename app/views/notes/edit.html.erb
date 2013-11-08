@@ -7,7 +7,16 @@
 		<tr>
 			<td class="note-label-col"><%= f.label :date %></td>
 			<td class="note-entry-col">
-				<%= f.date_select :date, as: :bootstrap_datepicker %>
+				
+				<%= f.text_field :date, 'data-behaviour' => 'datepicker' %>
+
+				<script type="text/javascript">
+				  $('[data-behaviour~=datepicker]').datepicker({
+				    format: "yyyy/mm/dd",
+				    autoclose: true,
+				    todayHighlight: true
+					});
+				</script>
 			</td>
 		</tr>
 		<tr>
