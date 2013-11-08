@@ -12,15 +12,6 @@
  *= require_tree .
  */
  
-.note-header
-{
-  font-size:large;
-  color:#f0f0f0;
-  background-color:#001a2b;
-  text-align:left;
-  vertical-align:middle;
-}
-
 /*--------test------*/
 .container {
   padding-left: 15px;

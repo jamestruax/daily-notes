@@ -1,26 +1,31 @@
-<div class="note-frame">
-	<table width="100%">
-		<tr>
-			<td class="note-header">ALL TAGS</td>
-		</tr>
-		<tr>
-			<td class="note-entry-col">
-				<% @tags.each do |tag| %>
-					<%= image_tag "tag-icon.png" %>
-					<%= link_to tag.summarize, controller: "tags", action: "show", id: tag.id %></br>
-				<% end %>
-			</td>
-		</tr>
-		<tr class="button-entry-row">
-			<td class="button-entry-row">
-				<table width="100%"><tr>
-					<td class="one-button-spacer"> </td>
-					<td class="button-entry">
-						<%= link_to "OK", controller: "home", action: "index" %>
-					</td>
-					<td class="one-button-spacer"> </td>
-				</tr></table>
-			</td>
-		</tr>
-	</table>
+<div class="row">
+  <div class="row note-header">
+	<div class="col-sm-10 col-xs-8">ALL TAGS</div>
+	<div class="col-sm-2  col-xs-4 note-header-link">
+	</div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">
+		<% if @tags.size == 0 %>
+ 			No tags
+		<% elsif @tags.size == 1 %>
+ 			<%= @tags.size %> tag
+		<% else %>
+ 			<%= @tags.size %> <%= ActiveModel::Naming.plural(Tag) %>
+ 		<% end %>
+ 	</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<% @tags.each do |tag| %>
+			<%= image_tag "tag-icon.png" %>
+			<%= link_to tag.summarize, controller: "tags", action: "show", id: tag.id %></br>
+		<% end %>
+    </div>
+  </div>
+  <div class="row button-entry-row">
+ 	<div class="col-sm-4 col-xs-2"></div>
+ 	<div class="col-sm-4 col-xs-8 button-entry">
+		<%= link_to "OK", controller: "home", action: "index" %>
+ 	</div>
+ 	<div class="col-sm-4 col-xs-2"></div>
+  </div>
 </div>

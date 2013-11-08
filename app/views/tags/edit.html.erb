@@ -1,27 +1,26 @@
-<div class="note-frame">
-	<%= form_for :tag, url: tag_path(@tag), method: :patch do |f| %>
-	<table>
-		<tr>
-			<td colspan="2" class="note-header">TAG</td>
-		</tr>
-		<tr>
-			<td class="note-label-col"><%= f.label :name %></td>
-			<td class="note-entry-col"><%= f.text_field :name %>
-			</td>
-		</tr>
-		<tr class="button-entry-row">
-			<td class="button-entry-row" colspan="3"><table width="100%"><tr>
-				<td class="two-button-spacer"> </td>
-				<td class="button-entry">
-					<%= link_to "CANCEL", controller: "home", action: "index" %>
-				</td>
-				<td class="two-button-spacer"> </td>
-				<td class="button-entry">
-					<%= f.submit %>
-				</td>
-				<td class="two-button-spacer"> </td>
-			</tr></table></td>
-		</tr>
-	</table>
-    <% end %>
+<%= form_for :tag, url: tag_path(@tag), method: :patch do |f| %>
+<div class="row">
+  <div class="row note-header">
+	<div class="col-sm-12 col-xs-12">TAG</div>
+  </div>
+  <div class="row note-details">
+ 	<div class="col-sm-2 col-xs-3 note-label">
+		<%= f.label :name %>
+	</div>
+    <div class="col-sm-10 col-xs-9 note-value">
+		<%= f.text_field :name %>
+    </div>
+  </div>
+  <div class="row button-entry-row">
+ 	<div class="col-sm-2 col-xs-2"></div>
+ 	<div class="col-sm-3 col-xs-3 button-entry">
+		<%= link_to "CANCEL", controller: "home", action: "index" %>
+ 	</div>
+ 	<div class="col-sm-2 col-xs-2"></div>
+ 	<div class="col-sm-3 col-xs-3 button-entry">
+		<%= f.submit "OK", :class => 'submit-button' %>
+ 	</div>
+ 	<div class="col-sm-2 col-xs-2"></div>
+  </div>
 </div>
+<% end %>

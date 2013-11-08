@@ -2,6 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.note-header
+{
+  font-size:large;
+  color:#f0f0f0;
+  background-color:#001a2b;
+  text-align:left;
+  vertical-align:middle;
+}
 
 .note-details
 {
@@ -73,12 +81,23 @@
 
 .button-entry-row
 {
-  background-color:#0058a0;
+  color:#c3c3c3;
+  background-color:#004a5c; 
 }
 
 .button-entry
 {
   text-align:center;
   font-size:larger;
-  background-color:#004882;
+  background-color:#001a2b;
+}
+
+.submit-button
+{
+  font-weight:bold;
+  color:#c3c3c3;
+  background-color:#001a2b;
+  border-style: none;
+  width:100%;
+  height:100%;
 }
