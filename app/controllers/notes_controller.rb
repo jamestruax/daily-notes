@@ -18,9 +18,13 @@ class NotesController < ApplicationController
     @note.description = ""; 
     @note.owner = current_user
     defaultTag = current_user.tags.detect { |t| t.name == "Sprint 2013-13" }
-    @note.tags.push( defaultTag ) 
+    if !defaultTag.nil? 
+      @note.tags.push( defaultTag )
+    end 
     defaultTag = current_user.tags.detect { |t| t.name == "Research" }
-    @note.tags.push( defaultTag ) 
+    if !defaultTag.nil?
+      @note.tags.push( defaultTag )
+    end 
   end
   
   def create
@@ -49,6 +53,16 @@ class NotesController < ApplicationController
       redirect_to controller: "home", action: "index"
     else
       render 'edit'
+    end
+  end
+
+  def destroy
+    @note = Note.find(params[:id])
+    @note.destroy
+
+    respond_to do |format|
+      format.html { redirect_to controller: "home", action: "index" }
+      format.xml  { head :ok }
     end
   end
   

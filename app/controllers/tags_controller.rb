@@ -48,6 +48,9 @@ class TagsController < ApplicationController
     @tag = Tag.find(params[:id])
     @tag.destroy
 
+    # TODO: Verify that the tag is not used.
+    # TODO: Reset any tag usage within notes
+
     respond_to do |format|
       format.html { redirect_to(tags_url) }
       format.xml  { head :ok }
