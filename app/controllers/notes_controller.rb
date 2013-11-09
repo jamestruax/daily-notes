@@ -40,6 +40,11 @@ class NotesController < ApplicationController
     @tags = current_user.tags
   end
   
+  def showForDay
+    @date = Note.find(params[:date])
+    @tags = current_user.tags
+  end
+
   def edit
     @note = Note.find(params[:id])
     @tags = current_user.tags

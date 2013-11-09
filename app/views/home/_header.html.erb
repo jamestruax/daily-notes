@@ -10,7 +10,11 @@
 -->
 			</button>
 			<% if user_signed_in? %>
-				<%= link_to "Daily Notes", {controller: "home", action: "index"}, class: "navbar-brand" %>
+				<% if Rails.env.development? %>
+					<%= link_to "DEVELOPMENT", {controller: "home", action: "index"}, class: "navbar-brand" %>
+				<% else %>
+					<%= link_to "Daily Notes", {controller: "home", action: "index"}, class: "navbar-brand" %>
+				<% end %>
 			<% else %>
 				Home
 			<% end %>

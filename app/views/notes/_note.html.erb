@@ -1,55 +1,16 @@
-<% if @printDate%>
-	<div class="row note-header">
-	  	<div class="col-xs-12">
-  			<%= note.date.strftime("%B %e, %Y") %>
-  		</div>
-	</div>
-<% end %>
 <div class="row note-list-item">
-    <div class="col-xs-2 time">
-		<%= note.time.strftime("%l:%M %P")%>
+    <div class="time">
+		<%= note.time.strftime("%l:%M %p")%>
+		<%= link_to "View", controller: "notes", action: "show", id: note.id %>
     </div>
-    <div class="col-xs-8 note-text">
+    <div class="note-text">
 		<%= simple_format(note.description) %>
 		<% if note.tags.size > 0 %>
 			<% note.tags.each do |t| %>
 				<%= image_tag "tag-icon.png" %>
 				<i><%= t.name %></i></br> 
 			<% end %>
+			</br>
 		<% end %>
     </div>
-    <div class="col-xs-2 edit-cell">
-		<%= link_to "View", controller: "notes", action: "show", id: note.id %>
-    </div>
 </div>
-
-<!--
-<table class="note">
-	<% if @printDate%>
-		<tr><td class="date" colspan="3"><%= note.date.strftime("%B %e, %Y") %></td></tr>
-	<% end %>
-	<tr>
-		<td valign="top" class="time">
-			<%= note.time.strftime("%l:%M %P")%>
- 		</td>
- 		<td valign="top" class="note-text">
-			<table>
-				<tr><td>
-					<%= simple_format(note.description) %>
-				</td></tr>
-				<tr><td class="note-tags">
-					<% if note.tags.size > 0 %>
-						<% note.tags.each do |t| %>
-							<%= image_tag "tag-icon.png" %>
-							<i><%= t.name %></i></br> 
-						<% end %>
-					<% end %>
-				</td></tr>
- 			</table>
- 		</td>
- 		<td class="edit-cell">
-			<%= link_to "View", controller: "notes", action: "show", id: note.id %>
-		</td>
-	</tr>
-</table>
--->

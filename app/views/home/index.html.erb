@@ -1,21 +1,10 @@
-<% priorDate = nil%>
+<% @data.each do |h| %>
 
-<% @notes.each do |note| %>
-
-  <% if note.date != priorDate %>
-  	 <% @printDate = true %>
-  <% else %>
-  	 <% @printDate = false %>
-  <% end %>
-
-  <%= render note %>
-
-  <% priorDate = note.date%>
+  <% @date = h[:date] %>
+  <% @days = h[:days] %>
+  
+  <%= render template: "notes/note_month_block" %>
 
 <% end %>
 
 <p><%= @loggedInMessage %></p>
-
-
-    
-    

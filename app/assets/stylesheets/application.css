@@ -29,8 +29,8 @@ h4 {
   margin-bottom: 0;
 }
 [class*="col-"] {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 hr {
