@@ -6,13 +6,13 @@
 	</div>
   </div>
   <div class="row note-details">
- 	<div class="col-sm-2 col-xs-3 note-label">Name</div>
+ 	<label class="col-sm-2 col-xs-3 note-label">Name</label>
     <div class="col-sm-10 col-xs-9 note-value">
 		<%= @tag.name %>
     </div>
   </div>
   <div class="row note-details">
- 	<div class="col-sm-2 col-xs-3 note-label">Notes</div>
+ 	<label class="col-sm-2 col-xs-3 note-label">Notes</label>
     <div class="col-sm-10 col-xs-9 note-value">
 		<% @tag.notes.each do |n| %>
 			<%= link_to n.summarize, controller: "notes", action: "show", id: n.id %></br>
