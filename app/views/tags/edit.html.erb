@@ -12,15 +12,20 @@
     </div>
   </div>
   <div class="row button-entry-row">
- 	<div class="col-sm-2 col-xs-2"></div>
- 	<div class="col-sm-3 col-xs-3 button-entry">
+ 	<div class="col-sm-1 col-xs-1"></div>
+ 	<div class="col-sm-2 col-xs-2 button-entry">
+		<%= link_to "Delete", { action: "destroy", id: @tag.id },
+		method: :delete, data: { confirm: "Are you sure?" } %>
+ 	</div>
+ 	<div class="col-sm-1 col-xs-1"></div>
+ 	<div class="col-sm-2 col-xs-2 button-entry">
 		<%= link_to "CANCEL", controller: "home", action: "index" %>
  	</div>
- 	<div class="col-sm-2 col-xs-2"></div>
- 	<div class="col-sm-3 col-xs-3 button-entry">
+ 	<div class="col-sm-1 col-xs-1"></div>
+ 	<div class="col-sm-2 col-xs-2 button-entry">
 		<%= f.submit "OK", :class => 'submit-button' %>
  	</div>
- 	<div class="col-sm-2 col-xs-2"></div>
+ 	<div class="col-sm-1 col-xs-1"></div>
   </div>
 </div>
 <% end %>

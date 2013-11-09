@@ -44,6 +44,16 @@ class TagsController < ApplicationController
     end
   end
   
+  def destroy
+    @tag = Tag.find(params[:id])
+    @tag.destroy
+
+    respond_to do |format|
+      format.html { redirect_to(tags_url) }
+      format.xml  { head :ok }
+    end
+  end
+  
   private
 
   def user_params
