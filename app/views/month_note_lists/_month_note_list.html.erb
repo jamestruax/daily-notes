@@ -9,6 +9,7 @@
     <% monthList.each do |dayList|%>
 		<% if dayList.notes.size > 0 %>
 		    <% @dayList = dayList %>
+		    <% @onlyOneNote = true %>
 			<%= render dayList %>
 		<% end %>
 	<% end %>

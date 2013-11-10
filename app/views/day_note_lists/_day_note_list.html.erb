@@ -3,9 +3,24 @@
 		<div class="date-day"><%= @dayList[:date].strftime("%e")%></div>
 		<div class="date-weekday"><%= @dayList[:date].strftime("%^a")%></div>
     </div>
-	<div class="col-xs-10 note-text">
-		<% @dayList.notes.each do |note|%>
-			<%= render note %>
+	<div class="col-xs-8 note-text">
+		<% @notes = @dayList.notes.sort_by! {|n| n[:date]}%>
+		<% if @onlyOneNote %>
+			<%= render @notes.first %>
+			<%= link_to "ALL #{@dayList.notes.size} Notes", controller: "day_note_lists", action: "show", id: @dayList.id %>
+		<% else %>
+			<% @notes.each do |note|%>
+				<%= render note %>
+			<% end %>
 		<% end %>
    	</div>
+   	<% if @onlyOneNote%>
+   		<% usedTags = @dayList.usedTags %>
+		<div class="col-xs-2 note-tags">
+			<% usedTags.each do |tag| %>
+				<%= image_tag "tag-icon.png" %>
+				<%= tag.name %></br>
+			<% end %>
+		</div>
+	<% end %>
 </div>

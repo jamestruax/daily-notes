@@ -17,6 +17,8 @@ DailyNotes::Application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
   resources :notes
   resources :tags
+  resources :day_note_lists
+  resources :month_note_lists
   
   # Example resource route with options:
   #   resources :products do
