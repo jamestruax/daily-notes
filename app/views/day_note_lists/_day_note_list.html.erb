@@ -1,15 +1,16 @@
 <div class="row note-list-item">
-    <div class="col-xs-2 date">
+    <div class="col-xs-3 col-md-2 date">
 		<div class="date-day"><%= @dayList[:date].strftime("%e")%></div>
 		<div class="date-weekday"><%= @dayList[:date].strftime("%^a")%></div>
    	</div>
 
-	<div class="col-xs-7">
+	<div class="col-xs-9 col-md-7 ">
 		<%= render @dayList.displayedNotes.first %>
 		<%= link_to "ALL #{@dayList.notes.size} Notes", controller: "day_note_lists", action: "show", id: @dayList.id %>
 	</div>
 
-	<div class="col-xs-3 note-tags">
+	<div class="col-xs-3 col-md-3 note-tags"></div>
+	<div class="col-xs-9 col-md-3 note-tags">
 		<% usedTags = @dayList.usedTags %>
 		<% usedTags.each do |tag| %>
 			<%= image_tag "tag-icon.png" %>
