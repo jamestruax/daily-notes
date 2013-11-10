@@ -16,7 +16,6 @@ class NotesController < ApplicationController
     @note.date = Date.today
     @note.time = Time.now.localtime
     @note.description = ""; 
-    @note.owner = current_user
     defaultTag = current_user.tags.detect { |t| t.name == "Sprint 2013-13" }
     if !defaultTag.nil? 
       @note.tags.push( defaultTag )
@@ -29,8 +28,18 @@ class NotesController < ApplicationController
   
   def create
     @note = Note.new(user_params)
-    @note.owner = current_user
-    if @note.save
+
+    @monthList = current_user.findOrCreateForNote(@note)
+      
+    @dayList = @monthList.findOrCreateDayListForNote(@note)
+
+    foo = @dayList.notes
+    debugger
+    @note.day_note_list = @dayList
+    
+    debugger
+
+    if @note.save && @monthList.save && @dayList.save
       redirect_to controller: "home", action: "index"
     end
   end
@@ -63,7 +72,23 @@ class NotesController < ApplicationController
 
   def destroy
     @note = Note.find(params[:id])
+    dayList = @note.day_note_list
+    
+    if (dayList.notes.size == 1 && dayList.notes[0].id == @note.id)
+      # Deleting the Note will leave the DayNoteList empty 
+      
+      monthList = dayList.month_note_list
+      
+      if (monthList.day_note_lists.size == 1 && monthList.day_note_lists[0].id == dayList.id)
+        # Deleteing the DayNoteList will leave the MonthNoteList empty
+        monthList.destroy
+      end
+      dayList.destroy
+    end
+
     @note.destroy
+
+
 
     respond_to do |format|
       format.html { redirect_to controller: "home", action: "index" }

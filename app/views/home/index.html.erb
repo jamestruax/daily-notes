@@ -1,8 +1,6 @@
-<% @data.each do |h| %>
+<% @allMonthlyNotes.each do |m| %>
 
-  <% @date = h[:date] %>
-  <% @days = h[:days] %>
-  
+  <% @monthlyNotes = m %>
   <%= render template: "notes/note_month_block" %>
 
 <% end %>

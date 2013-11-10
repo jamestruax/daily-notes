@@ -1,18 +1,16 @@
 <div class="row note-header">
   	<div class="col-xs-12">
-		<%= @date.strftime("%B %Y") %>
+		<%= @monthlyNotes.date.strftime("%B %Y") %>
 	</div>
 </div>
-<% @days.each do |day|%>
+<% @monthlyNotes.day_note_lists.each do |day|%>
 	<div class="row note-list-item">
     	<div class="col-xs-2 date">
 			<div class="date-day"><%= day[:date].strftime("%e")%></div>
 			<div class="date-weekday"><%= day[:date].strftime("%^a")%></div>
 	    </div>
     	<div class="col-xs-10 note-text">
-			<% @date  = day[:date] %>
-  			<% @notes = day[:notes] %>
-  
+			<% @notes = day.notes %>
 			<%= render template: "notes/note_day_block" %>
     	</div>
 	</div>

@@ -1,6 +1,5 @@
 class Note < ActiveRecord::Base
-  belongs_to :owner, class_name: User
-
+  belongs_to :day_note_list
   has_and_belongs_to_many :tags
   
   def self.notesSortedAndGroupedByMonth(notes)
