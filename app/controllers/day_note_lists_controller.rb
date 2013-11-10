@@ -1,0 +1,2 @@
+class DayNoteListsController < ApplicationController
+end

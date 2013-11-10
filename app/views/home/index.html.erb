@@ -1,7 +1,7 @@
 <% @allMonthlyNotes.each do |m| %>
 
   <% @notesForMonth = m %>
-  <%= render template: "notes/note_month_block" %>
+  <%= render m %>
 
 <% end %>
 

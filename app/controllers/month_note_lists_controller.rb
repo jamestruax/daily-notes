@@ -1,0 +1,2 @@
+class MonthNoteListsController < ApplicationController
+end

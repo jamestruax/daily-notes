@@ -1,0 +1,11 @@
+<div class="row note-list-item">
+    <div class="col-xs-2 date">
+		<div class="date-day"><%= @dayList[:date].strftime("%e")%></div>
+		<div class="date-weekday"><%= @dayList[:date].strftime("%^a")%></div>
+    </div>
+	<div class="col-xs-10 note-text">
+		<% @dayList.notes.each do |note|%>
+			<%= render note %>
+		<% end %>
+   	</div>
+</div>

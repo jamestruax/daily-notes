@@ -1,0 +1,15 @@
+<div class="row note-header">
+  	<div class="col-xs-12">
+		<%= @notesForMonth.date.strftime("%B %Y") %>
+	</div>
+</div>
+<% monthList = @notesForMonth.day_note_lists.sort_by! { |day| day[:date] }%>
+<% monthList.reverse! %>
+<% if monthList.size > 0 %>
+    <% monthList.each do |dayList|%>
+		<% if dayList.notes.size > 0 %>
+		    <% @dayList = dayList %>
+			<%= render dayList %>
+		<% end %>
+	<% end %>
+<% end %>
