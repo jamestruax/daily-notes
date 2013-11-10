@@ -1,6 +1,8 @@
 <div class="row note-list-item">
     <div class="time">
-		<%= note.date.strftime("%B %e, %Y at") %>
+    	<% if @includeDate %>
+			<%= note.date.strftime("%B %e, %Y at") %>
+		<% end %>
 		<%= note.time.strftime("%l:%M %p") %>
 		<%= link_to "View", controller: "notes", action: "show", id: note.id %>
     </div>
