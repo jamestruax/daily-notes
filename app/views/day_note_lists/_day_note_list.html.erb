@@ -1,9 +1,17 @@
 <div class="row note-list-item">
-    <div class="col-xs-2 date">
-		<div class="date-day"><%= @dayList[:date].strftime("%e")%></div>
-		<div class="date-weekday"><%= @dayList[:date].strftime("%^a")%></div>
-    </div>
-
+	<% if @onlyOneNote%>
+	    <div class="col-xs-2 date">
+			<div class="date-day"><%= @dayList[:date].strftime("%e")%></div>
+			<div class="date-weekday"><%= @dayList[:date].strftime("%^a")%></div>
+    	</div>
+	<% else %>
+		<div class="row date">
+			<div class="col-xs-12 date-day">
+				<%= @dayList[:date].strftime("%^A - %^B %e, %Y")%>     <!-- Wednesday November 6 2013-->
+			</div>
+    	</div>
+	<% end %>
+	<div>
 	<%= render partial: "notes/note_list", locals: { noteList: @dayList.notes }%>
 
 	<% if @onlyOneNote%>
@@ -15,4 +23,5 @@
 		<% end %>
 	</div>
 	<% end %>
+	</div>
 </div>
