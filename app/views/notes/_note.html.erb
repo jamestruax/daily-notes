@@ -11,7 +11,7 @@
 		<% if note.tags.size > 0 %>
 			<% note.tags.each do |t| %>
 				<%= image_tag "tag-icon.png" %>
-				<i><%= t.name %></i></br> 
+				<i><%= link_to t.name, controller: "tags", action: "show", id: t.id %></i></br>
 			<% end %>
 			</br>
 		<% end %>
