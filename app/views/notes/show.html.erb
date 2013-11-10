@@ -26,9 +26,13 @@
   <div class="row note-details">
  	<label class="col-sm-2 col-xs-3 note-label">Tags</label>
     <div class="col-sm-10 col-xs-9 note-value">
-		<% @note.tags.each do |t| %>
-			<%= image_tag "tag-icon.png" %>
-			<%= t.name %></br>
+		<% if @note.tags.size == 0 %>
+			No Tags
+		<% else %>
+			<% @note.tags.each do |t| %>
+				<%= image_tag "tag-icon.png" %>
+				<%= t.name %></br>
+			<% end %>
 		<% end %>
     </div>
   </div>

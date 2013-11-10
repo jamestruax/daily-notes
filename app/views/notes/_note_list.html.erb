@@ -2,6 +2,8 @@
 	<% @notes = noteList %>
 
 	<% @notes.each do |note|%>
-		<%= render note %>
+		<%= render partial: "notes/note", 
+		            locals: { note: note,
+	 		           displayTags: true } %>
 	<% end %>
 </div>
