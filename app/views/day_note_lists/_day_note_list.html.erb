@@ -5,7 +5,8 @@
    	</div>
 
 	<div class="col-xs-7">
-		<%= render partial: "notes/note_list", locals: { noteList: @dayList.notes }%>
+		<%= render @dayList.displayedNotes.first %>
+		<%= link_to "ALL #{@dayList.notes.size} Notes", controller: "day_note_lists", action: "show", id: @dayList.id %>
 	</div>
 
 	<div class="col-xs-3 note-tags">

@@ -7,9 +7,7 @@ class HomeController < ApplicationController
       
       @loggedInMessage = "Logged in"
       
-      @allMonthlyNotes = @current_user.month_note_lists.to_a
-      @allMonthlyNotes.sort_by! {|m| m[:date]}
-      @allMonthlyNotes.reverse!
+      @allMonthlyNotes = @current_user.displayedMonths
     end
   end
 end

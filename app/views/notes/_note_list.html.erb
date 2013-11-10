@@ -1,14 +1,7 @@
 <div class="note-text">
-	<% @notes = noteList.sort_by! {|n| [n.date, n.time]}%>
+	<% @notes = noteList %>
 
-	<% @notes.reverse! %>
-
-	<% if @onlyOneNote %>
-		<%= render @notes.first %>
-		<%= link_to "ALL #{@dayList.notes.size} Notes", controller: "day_note_lists", action: "show", id: @dayList.id %>
-	<% else %>
-		<% @notes.each do |note|%>
-			<%= render note %>
-		<% end %>
+	<% @notes.each do |note|%>
+		<%= render note %>
 	<% end %>
 </div>

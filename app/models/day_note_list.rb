@@ -6,6 +6,12 @@ class DayNoteList < ActiveRecord::Base
     self.notes.push(note)
   end
 
+  def displayedNotes
+    notes = self.notes.sort_by! {|n| [n.date, n.time]}
+    notes.reverse!
+    notes
+  end
+  
   def usedTags
     tags = Set.new
     

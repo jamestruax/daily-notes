@@ -26,4 +26,10 @@ class MonthNoteList < ActiveRecord::Base
       end
     end
   end
+
+  def displayedDays
+    monthList = self.day_note_lists.sort_by! { |day| day[:date] }
+    monthList.reverse!
+    monthList
+  end 
 end
