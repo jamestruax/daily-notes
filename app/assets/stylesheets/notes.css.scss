@@ -60,18 +60,20 @@
 {
   font-family:Segoe UI;
   color:#131313;              /* TEXT Color 2 */
-  font-size: small;
   text-align:center;
   vertical-align: middle;
   font-size:larger;
   background-color: #c3c3c3; /* Probably will be removed (similar to BKG Color 2 */
+  border: 15px;
+  border-style: solid;
+  border-color: #e8e8e8;     /* BKG Color 2 */
 }
 
 .date-day
 {
   font-family:Segoe UI;
   color:#131313;              /* TEXT Color 2 */
-  font-size: 30pt;
+  font-size: 26pt;
   text-align:center;
   vertical-align: middle;
 }
@@ -80,10 +82,9 @@
 {
   font-family:Segoe UI;
   color:#131313;              /* TEXT Color 2 */
-  font-size: small;
+  font-size: 14pt;
   text-align:center;
   vertical-align: middle;
-  font-size:larger;
 }
 
 .date-full
