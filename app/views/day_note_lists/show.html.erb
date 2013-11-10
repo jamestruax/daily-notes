@@ -1,3 +1,9 @@
-<% @onlyOneNote = false %>
+<div>
+	<div class="row note-header">
+		<div class="col-xs-12">
+			<%= @dayList[:date].strftime("%^A - %^B %e, %Y")%>     <!-- Wednesday November 6 2013-->
+		</div>
+   	</div>
 
-<%= render @dayList %>
+	<%= render partial: "notes/note_list", locals: { noteList: @dayList.notes }%>
+</div>
