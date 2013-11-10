@@ -47,7 +47,6 @@ class User < ActiveRecord::Base
       found = MonthNoteList.new
       found.owner_id = self.id
       found.date = Date.new(note.year, note.month, 1)
-      debugger
     end
 
     found

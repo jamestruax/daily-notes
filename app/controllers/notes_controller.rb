@@ -33,12 +33,8 @@ class NotesController < ApplicationController
       
     @dayList = @monthList.findOrCreateDayListForNote(@note)
 
-    foo = @dayList.notes
-    debugger
     @note.day_note_list = @dayList
     
-    debugger
-
     if @note.save && @monthList.save && @dayList.save
       redirect_to controller: "home", action: "index"
     end
