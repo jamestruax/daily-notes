@@ -1,22 +1,15 @@
 <div class="row">
   <div class="row note-header">
-	<div class="col-sm-10 col-xs-8">TAG</div>
+	<div class="col-sm-10 col-xs-8"><%= @tag.name %></div>
 	<div class="col-sm-2  col-xs-4 note-header-link">
 		<%= link_to "Edit", controller: "tags", action: "edit" %>
 	</div>
   </div>
   <div class="row note-details">
- 	<label class="col-sm-2 col-xs-3 note-label">Name</label>
-    <div class="col-sm-10 col-xs-9 note-value">
-		<%= @tag.name %>
-    </div>
-  </div>
-  <div class="row note-details">
  	<label class="col-sm-2 col-xs-3 note-label">Notes</label>
     <div class="col-sm-10 col-xs-9 note-value">
-		<% @tag.notes.each do |n| %>
-			<%= link_to n.summarize, controller: "notes", action: "show", id: n.id %></br>
-		<% end %>
+		<% @includeDate = true %>
+   		<%= render partial: "notes/note_list", locals: { noteList: @tag.notes }%>
     </div>
   </div>
   <div class="row button-entry-row">
