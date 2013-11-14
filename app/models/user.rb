@@ -21,7 +21,7 @@ class User < ActiveRecord::Base
     if found.nil?
       found = MonthNoteList.new
       found.owner_id = self.id
-      found.date = Date.new(note.year, note.month, 1)
+      found.date = Date.new(note.date.year, note.date.month, 1)
     end
 
     found
