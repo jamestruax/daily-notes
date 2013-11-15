@@ -115,16 +115,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="1.4142136"
-     inkscape:cx="1261.036"
-     inkscape:cy="779.4821"
+     inkscape:zoom="1.4209424"
+     inkscape:cx="1632.99"
+     inkscape:cy="711.30651"
      inkscape:document-units="px"
-     inkscape:current-layer="g8123"
+     inkscape:current-layer="g7845"
      showgrid="true"
-     inkscape:window-width="1280"
-     inkscape:window-height="962"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
+     inkscape:window-width="1920"
+     inkscape:window-height="1005"
+     inkscape:window-x="-9"
+     inkscape:window-y="-9"
      inkscape:window-maximized="1"
      objecttolerance="20"
      guidetolerance="20" />
@@ -136,7 +136,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -2441,7 +2441,7 @@
       </g>
     </g>
     <g
-       transform="translate(1050.0535,-188.09041)"
+       transform="translate(1079.0449,-155.5635)"
        id="g7845">
       <text
          sodipodi:linespacing="125%"
@@ -2455,19 +2455,20 @@
            x="150.89188"
            sodipodi:role="line">November 3, 2013</tspan></text>
       <g
-         id="g8006">
+         id="g8006"
+         transform="translate(4.2298741,0)">
         <rect
            ry="0"
            rx="0"
            y="271.22403"
-           x="145.71439"
+           x="141.57263"
            height="104.62742"
            width="392.44165"
            id="rect7849"
            style="fill:#e8e8e8;fill-opacity:1;stroke:none" />
         <text
            xml:space="preserve"
-           style="font-size:9.25771427px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#131313;fill-opacity:1;stroke:none;font-family:Segoe UI Light;-inkscape-font-specification:'Segoe UI Light, Light'"
+           style="font-size:9.25771427px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#c09100;fill-opacity:1;stroke:none;font-family:Segoe UI Light;-inkscape-font-specification:'Segoe UI Light, Light'"
            x="150.32652"
            y="282.49377"
            id="text7863"
@@ -2477,7 +2478,7 @@
              y="282.49377"
              id="tspan7865">1:00 pm</tspan></text>
         <g
-           transform="translate(-267.23601,101.20176)"
+           transform="translate(-271.46588,96.225438)"
            id="g7871">
           <text
              xml:space="preserve"
@@ -2518,41 +2519,41 @@
         <text
            sodipodi:linespacing="125%"
            id="text7733-4"
-           y="294.85977"
-           x="155.00113"
+           y="282.77966"
+           x="151.03195"
            style="font-size:9.25771427px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#131313;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
            xml:space="preserve"><tspan
              id="tspan7739-8"
-             y="294.85977"
-             x="155.00113"
-             sodipodi:role="line">Adf ajsdlfj alsk;j dfl;ajs dfl;kjaslfdjafd a sdfkja;sldfj alksdj;lajs flaj sdf asd flk;ajsdf ;lajsl;d</tspan><tspan
-             y="306.43192"
-             x="155.00113"
+             y="282.77966"
+             x="151.03195"
+             sodipodi:role="line">              Adf ajsdlfj alsk;j dfl;ajs dfl;kjaslfdjafd a sdfkja;sldfj alksdj;lajs flaj sdf asd flk;ajsdf ;</tspan><tspan
+             y="294.35181"
+             x="151.03195"
              sodipodi:role="line"
-             id="tspan8736">fj a;sldfj al;ksjda sdf alksdfj ;lasj dflkaj sdfl;ajsdf</tspan><tspan
-             y="318.00406"
-             x="155.00113"
+             id="tspan8736">lajsl;d fj a;sldfj al;ksjda sdf alksdfj ;lasj dflkaj sdfl;ajsdf</tspan><tspan
+             y="305.92395"
+             x="151.03195"
              sodipodi:role="line"
              id="tspan8738" /><tspan
-             y="329.5762"
-             x="155.00113"
+             y="317.49609"
+             x="151.03195"
              sodipodi:role="line"
              id="tspan8151-2">asdfasfdaa aklsdfj lkajs df; lkajsdf;l asdf asdfjh fsdklja ;lkj</tspan><tspan
-             y="341.14835"
-             x="155.00113"
+             y="329.06824"
+             x="151.03195"
              sodipodi:role="line"
              id="tspan8740">alksdjf a;sdjf</tspan><tspan
-             y="352.72049"
-             x="155.00113"
+             y="340.64038"
+             x="151.03195"
              sodipodi:role="line"
              id="tspan8742">adsfkj a;lsdf</tspan><tspan
-             y="364.29263"
-             x="155.00113"
+             y="352.21252"
+             x="151.03195"
              sodipodi:role="line"
              id="tspan8744" /></text>
         <path
            style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           d="m 145.75997,375.70641 392.40421,0"
+           d="m 141.56565,375.70641 392.40421,0"
            id="path8193-4"
            inkscape:connector-curvature="0" />
       </g>
@@ -2644,214 +2645,8 @@
              y="237.27699"
              id="tspan7911">New</tspan></text>
       </g>
-      <g
-         id="g8746"
-         transform="translate(0,104.71875)">
-        <rect
-           style="fill:#e8e8e8;fill-opacity:1;stroke:none"
-           id="rect8748"
-           width="392.44165"
-           height="104.62742"
-           x="145.71439"
-           y="271.22403"
-           rx="0"
-           ry="0" />
-        <text
-           sodipodi:linespacing="125%"
-           id="text8750"
-           y="282.49377"
-           x="150.32652"
-           style="font-size:9.25771427px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#131313;fill-opacity:1;stroke:none;font-family:Segoe UI Light;-inkscape-font-specification:'Segoe UI Light, Light'"
-           xml:space="preserve"><tspan
-             id="tspan8752"
-             y="282.49377"
-             x="150.32652"
-             sodipodi:role="line">11:00 am</tspan></text>
-        <g
-           id="g8754"
-           transform="translate(-267.23601,101.20176)">
-          <text
-             sodipodi:linespacing="125%"
-             id="text8756"
-             y="266.44525"
-             x="438.79419"
-             style="font-size:8.87621975px;font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#131313;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Oblique"
-             xml:space="preserve"><tspan
-               id="tspan8758"
-               y="266.44525"
-               x="438.79419"
-               sodipodi:role="line">Sprint 2013-13</tspan></text>
-          <g
-             transform="translate(2.5424934,7.8417023)"
-             id="g8760"
-             inkscape:export-filename="C:\Users\jdt\Documents\Aptana Studio 3 Workspace\daily-notes\tag.png"
-             inkscape:export-xdpi="140.58708"
-             inkscape:export-ydpi="140.58708">
-            <path
-               transform="translate(-18.384776,185.26198)"
-               style="fill:#8d9000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-               d="m 441.93752,67.799659 8,0 c 0.36725,0 1,0.632747 1,1 l 0,4 c 0,0.367254 -0.63275,1 -1,1 l -8,0 -3,-3 z"
-               id="path8762"
-               inkscape:connector-curvature="0"
-               sodipodi:nodetypes="cssssccc" />
-            <path
-               sodipodi:type="arc"
-               style="fill:#000000;fill-opacity:1;stroke:none"
-               id="path8764"
-               sodipodi:cx="444.37241"
-               sodipodi:cy="71.295723"
-               sodipodi:rx="1.5026019"
-               sodipodi:ry="1.5026019"
-               d="m 445.87501,71.295723 c 0,0.829864 -0.67274,1.502602 -1.5026,1.502602 -0.82987,0 -1.50261,-0.672738 -1.50261,-1.502602 0,-0.829864 0.67274,-1.502602 1.50261,-1.502602 0.82986,0 1.5026,0.672738 1.5026,1.502602 z"
-               transform="matrix(0.69117646,0,0,0.69117646,117.41157,206.81573)" />
-          </g>
-        </g>
-        <text
-           xml:space="preserve"
-           style="font-size:9.25771427px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#131313;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-           x="155.00113"
-           y="294.85977"
-           id="text8766"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             x="155.00113"
-             y="294.85977"
-             id="tspan8768">Adf ajsdlfj alsk;j dfl;ajs dfl;kjaslfdjafd a sdfkja;sldfj alksdj;lajs flaj sdf asd flk;ajsdf ;lajsl;d</tspan><tspan
-             id="tspan8770"
-             sodipodi:role="line"
-             x="155.00113"
-             y="306.43192">fj a;sldfj al;ksjda sdf alksdfj ;lasj dflkaj sdfl;ajsdf</tspan><tspan
-             id="tspan8772"
-             sodipodi:role="line"
-             x="155.00113"
-             y="318.00406" /><tspan
-             id="tspan8774"
-             sodipodi:role="line"
-             x="155.00113"
-             y="329.5762">asdfasfdaa aklsdfj lkajs df; lkajsdf;l asdf asdfjh fsdklja ;lkj</tspan><tspan
-             id="tspan8776"
-             sodipodi:role="line"
-             x="155.00113"
-             y="341.14835">alksdjf a;sdjf</tspan><tspan
-             id="tspan8778"
-             sodipodi:role="line"
-             x="155.00113"
-             y="352.72049">adsfkj a;lsdf</tspan><tspan
-             id="tspan8780"
-             sodipodi:role="line"
-             x="155.00113"
-             y="364.29263" /></text>
-        <path
-           inkscape:connector-curvature="0"
-           id="path8782"
-           d="m 145.75997,375.70641 392.40421,0"
-           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
-      </g>
-      <g
-         transform="translate(0,209.43842)"
-         id="g8784">
-        <rect
-           ry="0"
-           rx="0"
-           y="271.22403"
-           x="145.71439"
-           height="104.62742"
-           width="392.44165"
-           id="rect8786"
-           style="fill:#e8e8e8;fill-opacity:1;stroke:none" />
-        <text
-           xml:space="preserve"
-           style="font-size:9.25771427px;font-style:normal;font-variant:normal;font-weight:300;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#131313;fill-opacity:1;stroke:none;font-family:Segoe UI Light;-inkscape-font-specification:'Segoe UI Light, Light'"
-           x="150.32652"
-           y="282.49377"
-           id="text8788"
-           sodipodi:linespacing="125%"><tspan
-             sodipodi:role="line"
-             x="150.32652"
-             y="282.49377"
-             id="tspan8790">9:00 am</tspan></text>
-        <g
-           transform="translate(-267.23601,101.20176)"
-           id="g8792">
-          <text
-             xml:space="preserve"
-             style="font-size:8.87621975px;font-style:oblique;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#131313;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans Oblique"
-             x="438.79419"
-             y="266.44525"
-             id="text8794"
-             sodipodi:linespacing="125%"><tspan
-               sodipodi:role="line"
-               x="438.79419"
-               y="266.44525"
-               id="tspan8796">Sprint 2013-13</tspan></text>
-          <g
-             inkscape:export-ydpi="140.58708"
-             inkscape:export-xdpi="140.58708"
-             inkscape:export-filename="C:\Users\jdt\Documents\Aptana Studio 3 Workspace\daily-notes\tag.png"
-             id="g8798"
-             transform="translate(2.5424934,7.8417023)">
-            <path
-               sodipodi:nodetypes="cssssccc"
-               inkscape:connector-curvature="0"
-               id="path8800"
-               d="m 441.93752,67.799659 8,0 c 0.36725,0 1,0.632747 1,1 l 0,4 c 0,0.367254 -0.63275,1 -1,1 l -8,0 -3,-3 z"
-               style="fill:#8d9000;fill-opacity:1;stroke:#000000;stroke-width:0.5;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:0"
-               transform="translate(-18.384776,185.26198)" />
-            <path
-               transform="matrix(0.69117646,0,0,0.69117646,117.41157,206.81573)"
-               d="m 445.87501,71.295723 c 0,0.829864 -0.67274,1.502602 -1.5026,1.502602 -0.82987,0 -1.50261,-0.672738 -1.50261,-1.502602 0,-0.829864 0.67274,-1.502602 1.50261,-1.502602 0.82986,0 1.5026,0.672738 1.5026,1.502602 z"
-               sodipodi:ry="1.5026019"
-               sodipodi:rx="1.5026019"
-               sodipodi:cy="71.295723"
-               sodipodi:cx="444.37241"
-               id="path8802"
-               style="fill:#000000;fill-opacity:1;stroke:none"
-               sodipodi:type="arc" />
-          </g>
-        </g>
-        <text
-           sodipodi:linespacing="125%"
-           id="text8804"
-           y="294.85977"
-           x="155.00113"
-           style="font-size:9.25771427px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#131313;fill-opacity:1;stroke:none;font-family:Sans;-inkscape-font-specification:Sans"
-           xml:space="preserve"><tspan
-             id="tspan8806"
-             y="294.85977"
-             x="155.00113"
-             sodipodi:role="line">Adf ajsdlfj alsk;j dfl;ajs dfl;kjaslfdjafd a sdfkja;sldfj alksdj;lajs flaj sdf asd flk;ajsdf ;lajsl;d</tspan><tspan
-             y="306.43192"
-             x="155.00113"
-             sodipodi:role="line"
-             id="tspan8808">fj a;sldfj al;ksjda sdf alksdfj ;lasj dflkaj sdfl;ajsdf</tspan><tspan
-             y="318.00406"
-             x="155.00113"
-             sodipodi:role="line"
-             id="tspan8810" /><tspan
-             y="329.5762"
-             x="155.00113"
-             sodipodi:role="line"
-             id="tspan8812">asdfasfdaa aklsdfj lkajs df; lkajsdf;l asdf asdfjh fsdklja ;lkj</tspan><tspan
-             y="341.14835"
-             x="155.00113"
-             sodipodi:role="line"
-             id="tspan8814">alksdjf a;sdjf</tspan><tspan
-             y="352.72049"
-             x="155.00113"
-             sodipodi:role="line"
-             id="tspan8816">adsfkj a;lsdf</tspan><tspan
-             y="364.29263"
-             x="155.00113"
-             sodipodi:role="line"
-             id="tspan8818" /></text>
-        <path
-           style="fill:none;stroke:#000000;stroke-width:0.5;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-           d="m 145.75997,375.70641 392.40421,0"
-           id="path8820"
-           inkscape:connector-curvature="0" />
-      </g>
       <rect
-         style="fill:none;fill-opacity:1;stroke:#000000;stroke-opacity:1"
+         style="fill:none;stroke:#000000;stroke-opacity:1"
          id="rect8822"
          width="36"
          height="19.5"
@@ -2894,6 +2689,22 @@
            id="tspan8834"
            x="1000.5"
            y="-7.3877902">date</tspan></text>
+      <use
+         x="0"
+         y="0"
+         xlink:href="#g8006"
+         id="use4508"
+         transform="translate(0,104.62774)"
+         width="744.09448"
+         height="1052.3622" />
+      <use
+         x="0"
+         y="0"
+         xlink:href="#use4508"
+         id="use4510"
+         transform="translate(0,104.71484)"
+         width="744.09448"
+         height="1052.3622" />
     </g>
     <text
        sodipodi:linespacing="125%"

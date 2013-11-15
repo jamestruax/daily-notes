@@ -6,7 +6,13 @@ class Tag < ActiveRecord::Base
   def summarize
     str = String.new
     str = self.name
-#    str += "(" + String.new(self.notes.size) + " Notes)"
     str
   end
+
+  def displayedNotes
+    notes = self.notes.sort_by! {|n| [n.date, n.time]}
+    notes.reverse!
+    notes
+  end
+
 end
