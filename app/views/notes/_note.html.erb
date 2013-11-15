@@ -1,6 +1,7 @@
 <div class="row note-list-row">
 	<div class="note-list-item">
- 	   <span class="time">
+		<p>
+ 		<span class="time">
     		<% if @includeDate %>
 				<%= note.date.strftime("%B %e, %Y - ") %>
 			<% end %>
@@ -8,7 +9,9 @@
 		</span>
 		<span class="note-text">
 			<%= simple_format(note.description, {}, wrapper_tag: "span") %>
-			<p>
+		</span>
+		</p>
+		<p>
 			<% if displayTags %>
 				<% if note.tags.size > 0 %>
 					<% note.tags.each do |t| %>
@@ -18,8 +21,7 @@
 					</br>
 				<% end %>
 			<% end %>
-			</p>
-		</span>
+		</p>
 	</div>
 	<div class="note-list-item">
 		<%= link_to "VIEW", controller: "notes", action: "show", id: note.id %>&nbsp;&nbsp;&nbsp;
