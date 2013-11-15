@@ -11,16 +11,8 @@
  		<%= f.label :date %>
  	</div>
     <div class="col-sm-10 col-xs-9 note-value">
-		<%= f.text_field :date, 'data-behaviour' => 'datepicker' %>
-
-		<script type="text/javascript">
-		  $('[data-behaviour~=datepicker]').datepicker({
-		    format: "yyyy/mm/dd",
-		    autoclose: true,
-		    todayHighlight: true
-		});
-	 	</script>
-    </div>
+		<%= f.date_field :date %>
+	</div>
   </div>
   <div class="row note-details">
  	<div class="col-sm-2 col-xs-3 note-label">
