@@ -22,14 +22,21 @@
 {
   color:#131313;              /* TEXT Color 2 */
   background-color:#e8e8e8;   /* BKG Color 2 */
-  /*border-bottom-style:solid;
-  border-bottom-width:1px;*/
+}
+
+.note-list-row
+{
+  border-bottom-style:solid;
+  border-bottom-width:1px;
+  padding: 5px;
+  padding-bottom: 15px;
+  background-color:#e8e8e8;   /* BKG Color 2 */
 }
 
 .note-text
 {
   color:#131313;              /* TEXT Color 2 */
-  font-size: small;
+  font-size: 12pt;
   text-align:left;
   vertical-align: middle;
 }
@@ -49,11 +56,10 @@
 .time
 {
   font-family:Segoe UI;
-  color:#131313;              /* TEXT Color 2 */
-  font-size: small;
+  color:#ebb100;              /* TEXT Color 3 */
+  font-size: 12pt;
   text-align:left;
   vertical-align: middle;
-  font-size:larger;
 }
 
 .date
@@ -83,6 +89,15 @@
   font-family:Segoe UI;
   color:#131313;              /* TEXT Color 2 */
   font-size: 14pt;
+  text-align:center;
+  vertical-align: middle;
+}
+
+.date-all
+{
+  font-family:Segoe UI;
+  color:#131313;              /* TEXT Color 2 */
+  font-size: 12pt;
   text-align:center;
   vertical-align: middle;
 }

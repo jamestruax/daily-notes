@@ -1,21 +1,30 @@
-<div class="row note-list-item">
-    <div class="time">
-    	<% if @includeDate %>
-			<%= note.date.strftime("%B %e, %Y at") %>
-		<% end %>
-		<%= note.time.strftime("%l:%M %p") %>
-		<%= link_to "View", controller: "notes", action: "show", id: note.id %>
-    </div>
-    <div class="note-text">
-		<%= simple_format(note.description) %>
-		<% if displayTags %>
-			<% if note.tags.size > 0 %>
-				<% note.tags.each do |t| %>
-					<%= image_tag "tag-icon.png" %>
-					<i><%= link_to t.name, controller: "tags", action: "show", id: t.id %></i>&nbsp;&nbsp;
-				<% end %>
-				</br>
+<div class="row note-list-row">
+	<div class="note-list-item">
+ 	   <span class="time">
+    		<% if @includeDate %>
+				<%= note.date.strftime("%B %e, %Y - ") %>
 			<% end %>
-		<% end %>
-    </div>
+			<%= note.time.strftime("%l:%M %p") %>
+		</span>
+		<span class="note-text">
+			<%= simple_format(note.description, {}, wrapper_tag: "span") %>
+			<p>
+			<% if displayTags %>
+				<% if note.tags.size > 0 %>
+					<% note.tags.each do |t| %>
+						<%= image_tag "tag-icon.png" %>
+						<i><%= link_to t.name, controller: "tags", action: "show", id: t.id %></i>&nbsp;&nbsp;
+					<% end %>
+					</br>
+				<% end %>
+			<% end %>
+			</p>
+		</span>
+	</div>
+	<div class="note-list-item">
+		<%= link_to "VIEW", controller: "notes", action: "show", id: note.id %>&nbsp;&nbsp;&nbsp;
+		<%= link_to "EDIT", controller: "notes", action: "edit", id: note.id %>&nbsp;&nbsp;&nbsp;
+		<%= link_to "DELETE", { controller: "notes", action: "destroy", id: note.id },
+			method: :delete, data: { confirm: "Are you sure?" } %>
+	</div>
 </div>
