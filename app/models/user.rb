@@ -11,7 +11,7 @@ class User < ActiveRecord::Base
 
   def findOrCreateForNote(note)
     found = nil;
-    self.month_note_lists.find(:all).each do |m|
+    self.month_note_lists.all.each do |m|
       if (m.date.month == note.date.month &&
           m.date.year == note.date.year)
         found = m

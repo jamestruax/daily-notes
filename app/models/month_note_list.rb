@@ -4,7 +4,7 @@ class MonthNoteList < ActiveRecord::Base
     
   def findOrCreateDayListForNote(note)
     found = nil;
-    self.day_note_lists.find(:all).each do |day|
+    self.day_note_lists.all.each do |day|
       if (day.date == note.date)
         found = day
       end
@@ -20,7 +20,7 @@ class MonthNoteList < ActiveRecord::Base
   end
   
   def add(note)
-    self.day_note_lists.find(:all).each do |day|
+    self.day_note_lists.all.each do |day|
       if (day.date == note.date)
         day.add(note)
       end
