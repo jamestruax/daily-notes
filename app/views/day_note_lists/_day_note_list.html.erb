@@ -2,9 +2,11 @@
     <div class="col-xs-3 col-md-2 date">
 		<div class="date-day"><%= @dayList[:date].strftime("%e")%></div>
 		<div class="date-weekday"><%= @dayList[:date].strftime("%^a")%></div>
-		<div class="date-all">
-			<%= link_to "ALL #{@dayList.notes.size} Notes", controller: "day_note_lists", action: "show", id: @dayList.id %>
-		</div>
+		<% if @dayList.notes.size > 1 %>
+			<div class="date-all">
+				<%= link_to "ALL #{@dayList.notes.size} Notes", controller: "day_note_lists", action: "show", id: @dayList.id %>
+			</div>
+		<% end %>
    	</div>
 
 	<div class="col-xs-9 col-md-7 ">
@@ -12,7 +14,7 @@
 		    locals: { note: @dayList.displayedNotes.first,
 	 		   displayTags: false } %>
 		<% if @dayList.notes.size > 1 %>
-			There are <%= @dayList.notes.size - 1 %> more notes
+			There are <%= @dayList.notes.size - 1 %> more note(s)
 		<% end %>
 	</div>
 
