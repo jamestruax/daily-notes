@@ -11,6 +11,9 @@
 		<%= render partial: "notes/note", 
 		    locals: { note: @dayList.displayedNotes.first,
 	 		   displayTags: false } %>
+		<% if @dayList.notes.size > 1 %>
+			There are <%= @dayList.notes.size - 1 %> more notes
+		<% end %>
 	</div>
 
 	<div class="col-xs-3 col-md-3 note-tags"></div>
