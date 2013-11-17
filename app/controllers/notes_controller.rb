@@ -60,6 +60,12 @@ class NotesController < ApplicationController
     @note = Note.find(params[:id])
  
     if @note.update(user_params)
+      m = current_user.findOrCreateForNote(@note)
+      d = m.findOrCreateDayListForNote(@note)
+      @note.day_note_list = d
+      m.save
+      d.save
+      @note.save
       redirect_to controller: "home", action: "index"
     else
       render 'edit'

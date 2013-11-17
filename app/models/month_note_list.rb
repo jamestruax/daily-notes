@@ -14,7 +14,6 @@ class MonthNoteList < ActiveRecord::Base
       found = DayNoteList.new
       found.date = note.date
       found.month_note_list = self;
-
     end
     found
   end
