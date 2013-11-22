@@ -14,7 +14,11 @@
 		    locals: { note: @dayList.displayedNotes.first,
 	 		   displayTags: false } %>
 		<% if @dayList.notes.size > 1 %>
-			There are <%= @dayList.notes.size - 1 %> more note(s)
+			<% if @dayList.notes.size == 2 %>
+				There is 1 more note
+			<% else %>
+				There are <%= @dayList.notes.size - 1 %> more <%= ActiveModel::Naming.plural(Note) %>
+			<% end %>
 		<% end %>
 	</div>
 
