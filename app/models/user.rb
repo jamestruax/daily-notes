@@ -33,4 +33,11 @@ class User < ActiveRecord::Base
     allMonthlyNotes.reverse!
     allMonthlyNotes
   end
+
+  def currentMonth
+    allMonthlyNotes = self.month_note_lists.to_a
+    allMonthlyNotes.sort_by! {|m| m[:date]}
+    allMonthlyNotes.reverse!
+    allMonthlyNotes.first
+  end
 end

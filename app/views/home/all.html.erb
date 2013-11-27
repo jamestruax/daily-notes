@@ -1,0 +1,8 @@
+<% @allMonthlyNotes.each do |m| %>
+
+  <% @notesForMonth = m %>
+  <%= render m %>
+
+<% end %>
+
+<p><%= @loggedInMessage %></p>

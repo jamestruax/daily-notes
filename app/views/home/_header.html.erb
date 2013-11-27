@@ -23,14 +23,14 @@
 		<div class="collapse navbar-collapse">
 			<ul class="nav navbar-nav">
 				<% if user_signed_in? %>
-					<li class="active">
-						<%= link_to "Home", controller: "home", action: "index" %>
+					<li>
+						<%= link_to "ALL", controller: "home", action: "all" %>
 					</li>
 					<li>
-						<%= link_to "Tags", controller: "tags", action: "index"%>
+						<%= link_to "TAGS", controller: "tags", action: "index"%>
 					</li>
 					<li>
-						<%= link_to "New", controller: "notes", action: "new"%>
+						<%= link_to "NEW", controller: "notes", action: "new"%>
 					</li>
 				<% else %>
 					<li class="active">Home</li>
