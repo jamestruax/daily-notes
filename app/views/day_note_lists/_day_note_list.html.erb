@@ -1,4 +1,4 @@
-<div class="row note-list-item">
+<div class="row note-list-row">
     <div class="col-xs-3 col-md-2 date">
 		<div class="date-day"><%= @dayList[:date].strftime("%e")%></div>
 		<div class="date-weekday"><%= @dayList[:date].strftime("%^a")%></div>
@@ -10,16 +10,21 @@
    	</div>
 
 	<div class="col-xs-9 col-md-7 ">
+		
+		<div class="row note-row">
 		<%= render partial: "notes/note", 
-		    locals: { note: @dayList.displayedNotes.first,
-	 		   displayTags: false } %>
-		<% if @dayList.notes.size > 1 %>
-			<% if @dayList.notes.size == 2 %>
-				There is 1 more note
-			<% else %>
-				There are <%= @dayList.notes.size - 1 %> more <%= ActiveModel::Naming.plural(Note) %>
+	    	        locals: { note: @dayList.displayedNotes.first,
+ 		   	   displayTags: false } %>
+	    </div>
+	    <div class="row">
+			<% if @dayList.notes.size > 1 %>
+				<% if @dayList.notes.size == 2 %>
+				    <span>There is 1 more note</span>
+				<% else %>
+					<span>There are <%= @dayList.notes.size - 1 %> more <%= ActiveModel::Naming.plural(Note) %></span>
+				<% end %>
 			<% end %>
-		<% end %>
+		</div>
 	</div>
 
 	<div class="col-xs-3 col-md-3 note-tags"></div>
