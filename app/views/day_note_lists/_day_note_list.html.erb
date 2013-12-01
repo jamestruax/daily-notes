@@ -16,15 +16,6 @@
 	    	        locals: { note: @dayList.displayedNotes.first,
  		   	   displayTags: false } %>
 	    </div>
-	    <div class="row">
-			<% if @dayList.notes.size > 1 %>
-				<% if @dayList.notes.size == 2 %>
-				    <span>There is 1 more note</span>
-				<% else %>
-					<span>There are <%= @dayList.notes.size - 1 %> more <%= ActiveModel::Naming.plural(Note) %></span>
-				<% end %>
-			<% end %>
-		</div>
 	</div>
 
 	<div class="col-xs-3 col-md-3 note-tags"></div>
