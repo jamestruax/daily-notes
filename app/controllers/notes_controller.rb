@@ -20,7 +20,7 @@ class NotesController < ApplicationController
     if !defaultTag.nil? 
       @note.tags.push( defaultTag )
     end 
-    defaultTag = current_user.tags.detect { |t| t.name == "Solar Lamp" }
+    defaultTag = current_user.tags.detect { |t| t.name == "Solar Lamps" }
     if !defaultTag.nil?
       @note.tags.push( defaultTag )
     end 
