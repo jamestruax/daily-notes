@@ -16,11 +16,11 @@ class NotesController < ApplicationController
     @note.date = Date.today
     @note.time = Time.now.localtime
     @note.description = ""; 
-    defaultTag = current_user.tags.detect { |t| t.name == "Sprint 2013-13" }
+    defaultTag = current_user.tags.detect { |t| t.name == "Sprint 2013-15" }
     if !defaultTag.nil? 
       @note.tags.push( defaultTag )
     end 
-    defaultTag = current_user.tags.detect { |t| t.name == "Research" }
+    defaultTag = current_user.tags.detect { |t| t.name == "Solar Lamp" }
     if !defaultTag.nil?
       @note.tags.push( defaultTag )
     end 
